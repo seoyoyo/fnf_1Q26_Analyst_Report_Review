@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>F&F 26년 1분기 실적발표 후 애널리스트 리포트 종합 (CEO Summary)</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+@page{size:A4 landscape;margin:10mm 12mm}
+body{font-family:'Noto Sans KR',sans-serif;background:#f5f6f8;color:#1a1d24;font-size:10px;line-height:1.5;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:297mm;min-height:210mm;padding:12mm 14mm 8mm;position:relative;margin:8px auto;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+@media print{body{background:#fff}.page{box-shadow:none;margin:0;width:auto;min-height:auto}}
+
+/* Header */
+.hdr{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2.5px solid #0b2d52;padding-bottom:6px;margin-bottom:8px}
+.hdr h1{font-size:18px;font-weight:900;letter-spacing:-0.5px;color:#0b2d52}
+.hdr h1 span.sub{font-size:11px;font-weight:500;color:#6b7280;margin-left:8px}
+.hdr .meta{font-size:9px;color:#6b7280;text-align:right;line-height:1.4}
+.hdr .badge{font-size:8px;font-weight:800;color:#fff;background:#0b2d52;padding:3px 10px;border-radius:3px;letter-spacing:1.5px;margin-bottom:4px;display:inline-block}
+
+/* Executive Summary */
+.exec{background:linear-gradient(135deg,rgba(11,45,82,.05),rgba(193,154,86,.06));border:1px solid rgba(11,45,82,.18);border-radius:6px;padding:8px 12px;margin-bottom:10px;font-size:9.8px;line-height:1.65}
+.exec b{font-weight:700;color:#0b2d52}
+.exec .exec-intro{margin-bottom:5px;padding-bottom:4px;border-bottom:1px solid rgba(11,45,82,.15)}
+.exec ul{list-style:none;padding:0;margin:0}
+.exec ul li{padding:4px 0 4px 0;border-bottom:1px dashed rgba(11,45,82,.12);font-size:9.5px;line-height:1.6}
+.exec ul li:last-child{border-bottom:none}
+.exec .exec-lbl{display:inline-block;background:#0b2d52;color:#fff;font-size:8px;font-weight:800;padding:2px 7px;border-radius:3px;margin-right:6px;letter-spacing:0.3px;vertical-align:middle;min-width:90px;text-align:center}
+.exec .exec-lbl.gold{background:#a07a2c}
+.gold{color:#a07a2c}.navy{color:#0b2d52}.red{color:#b91c1c}.green{color:#15803d}.gray{color:#6b7280}
+
+/* Layout */
+.row{display:flex;gap:10px;margin-bottom:8px}
+.col-1{flex:1}.col-2{flex:2}.col-15{flex:1.5}
+.section{margin-bottom:8px}
+
+/* Section title */
+.sec-t{font-size:11px;font-weight:800;color:#0b2d52;margin-bottom:5px;padding-bottom:3px;border-bottom:1.5px solid #0b2d52;letter-spacing:0.3px;display:flex;align-items:center;gap:6px}
+.sec-t .n{display:inline-block;width:14px;height:14px;background:#0b2d52;color:#fff;font-size:8px;font-weight:800;text-align:center;line-height:14px;border-radius:50%}
+
+/* KPI cards */
+.kpi{display:flex;gap:8px;margin-bottom:8px}
+.kc{flex:1;border-radius:6px;padding:8px 10px;border:1px solid #e5e7eb;background:#fff}
+.kc .kl{font-size:8px;color:#6b7280;font-weight:700;letter-spacing:0.5px;text-transform:uppercase}
+.kc .kv{font-size:20px;font-weight:900;letter-spacing:-0.8px;margin:2px 0;color:#0b2d52}
+.kc .kv.small{font-size:16px}
+.kc .ks{font-size:8.5px;color:#6b7280;font-weight:500}
+.kc .ks b.up{color:#15803d;font-weight:700}
+.kc .ks b.dn{color:#b91c1c;font-weight:700}
+.kn{background:rgba(11,45,82,.04);border-color:rgba(11,45,82,.2)}
+.kg{background:rgba(160,122,44,.04);border-color:rgba(160,122,44,.2)}
+.kg .kv{color:#a07a2c}
+.kr{background:rgba(185,28,28,.04);border-color:rgba(185,28,28,.2)}
+.kr .kv{color:#b91c1c}
+.kgr{background:rgba(21,128,61,.04);border-color:rgba(21,128,61,.2)}
+.kgr .kv{color:#15803d}
+
+/* Tables */
+.tb{width:100%;border-collapse:collapse;font-size:9px}
+.tb th{background:#0b2d52;color:#fff;padding:4px 6px;font-weight:600;text-align:center;font-size:8.5px;letter-spacing:0.2px}
+.tb th:first-child{text-align:left;padding-left:8px}
+.tb td{padding:4px 6px;border-bottom:1px solid #e5e7eb;text-align:center;font-variant-numeric:tabular-nums}
+.tb td:first-child{text-align:left;font-weight:600;padding-left:8px}
+.tb tr:nth-child(even){background:#f8f9fa}
+.tb tr.hl{background:rgba(160,122,44,.08)!important}
+.tb tr.hl td{color:#a07a2c;font-weight:800}
+.tb tr.sm{background:#eef1f5}
+.tb tr.sm td{font-weight:800;color:#0b2d52}
+.tb .up{color:#15803d;font-weight:700}
+.tb .dn{color:#b91c1c;font-weight:700}
+.tb .mu{color:#6b7280}
+
+/* Compact table */
+.tb-c{font-size:8.5px}
+.tb-c th{padding:3px 5px;font-size:8px}
+.tb-c td{padding:3px 5px}
+
+/* Cards for viewpoints */
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:5px;padding:7px 9px;font-size:8.8px;line-height:1.6}
+.card.pos{border-left:3px solid #15803d;background:rgba(21,128,61,.03)}
+.card.neg{border-left:3px solid #b91c1c;background:rgba(185,28,28,.03)}
+.card.neu{border-left:3px solid #a07a2c;background:rgba(160,122,44,.03)}
+.card h4{font-size:9.5px;font-weight:800;margin-bottom:3px;color:#0b2d52;display:flex;align-items:center;gap:4px}
+.card h4.p{color:#15803d}
+.card h4.n{color:#b91c1c}
+.card h4.u{color:#a07a2c}
+.card ul{padding-left:14px;margin-top:2px}
+.card ul li{margin-bottom:2px;font-size:8.8px}
+.card ul li b{color:#0b2d52}
+
+/* Broker quote */
+.qblock{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:4px}
+.qq{background:#fff;border:1px solid #e5e7eb;border-radius:4px;padding:6px 8px;font-size:8.5px;line-height:1.55}
+.qq .qh{font-size:8.8px;font-weight:800;color:#0b2d52;margin-bottom:2px;display:flex;justify-content:space-between;align-items:center}
+.qq .qh .qtp{font-size:8px;font-weight:700;color:#a07a2c;background:rgba(160,122,44,.1);padding:1px 6px;border-radius:3px}
+.qq .qt{font-size:8.5px;font-weight:600;color:#334155;font-style:italic;margin-bottom:3px}
+.qq .qd{font-size:8.3px;color:#475569}
+
+/* Issue box */
+.ibox{background:linear-gradient(135deg,#fff,#fffaf0);border:1px solid rgba(160,122,44,.3);border-radius:5px;padding:7px 9px;margin-bottom:6px;font-size:9px;line-height:1.6}
+.ibox .ih{font-size:9.8px;font-weight:800;color:#a07a2c;margin-bottom:4px;padding-bottom:3px;border-bottom:1px dashed rgba(160,122,44,.3)}
+.ibox .ih .tag{font-size:7.5px;background:#a07a2c;color:#fff;padding:1px 5px;border-radius:3px;margin-left:6px;font-weight:700;letter-spacing:0.5px}
+.ibox b{color:#0b2d52}
+.ibox ul{list-style:none;padding-left:0;margin:0}
+.ibox ul li{position:relative;padding-left:14px;margin-bottom:4px;font-size:8.8px;line-height:1.55}
+.ibox ul li::before{content:"▸";position:absolute;left:0;top:0;color:#a07a2c;font-weight:800;font-size:9px}
+.ibox ul li ul{margin-top:3px;margin-bottom:2px;padding-left:6px}
+.ibox ul li ul li{padding-left:14px;margin-bottom:2px;font-size:8.5px}
+.ibox ul li ul li::before{content:"○";color:#15803d;font-size:7px;top:2px}
+.ibox .lbl{display:inline-block;background:rgba(11,45,82,.08);color:#0b2d52;font-size:7.5px;font-weight:800;padding:1px 6px;border-radius:2px;margin-right:5px;letter-spacing:0.3px;vertical-align:middle}
+.ibox .lbl.gold{background:rgba(160,122,44,.15);color:#a07a2c}
+.ibox .lbl.green{background:rgba(21,128,61,.12);color:#15803d}
+.ibox .lbl.red{background:rgba(185,28,28,.12);color:#b91c1c}
+
+/* Footer */
+.ftr{display:flex;justify-content:space-between;font-size:7.5px;color:#9ca3af;border-top:1px solid #e5e7eb;padding-top:4px;margin-top:10px}
+
+/* Surprise badge */
+.sprz{display:inline-block;font-size:8px;font-weight:800;color:#fff;background:linear-gradient(90deg,#15803d,#22a05b);padding:2px 8px;border-radius:3px;letter-spacing:1px;margin-left:6px}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- Header -->
+<div class="hdr">
+  <div>
+    <div class="badge">CEO &amp; 임원 보고자료</div>
+    <h1>F&amp;F 26년 1분기 실적발표 애널리스트 리포트 종합<span class="sub">실적 Review &middot; 증권사 9사 코멘트 브리핑<span class="sprz">SURPRISE</span></span></h1>
+  </div>
+  <div class="meta">
+    <div><b>작성일</b> 2026-05-04</div>
+    <div><b>작성</b> IR파트</div>
+    <div><b>커버리지</b> 국내 8사 + 외국계 1사 (모건스탠리)</div>
+  </div>
+</div>
+
+<!-- Executive Summary -->
+<div class="exec">
+  <div class="exec-intro"><b>[Executive Summary]</b> &nbsp; 26.1Q 서프라이즈(영업이익 +24.2% YoY · 컨센 +14% 상회) 직후 발간된 <b class="navy">9개 애널리스트 리포트 종합</b> (국내 8사 + 외국계 모건스탠리)</div>
+  <ul>
+    <li><span class="exec-lbl">투자의견 · TP</span><b>9사 모두 BUY</b> (국내 8사 + 외국계 1사). <b>8개사 목표주가 상향</b>(평균 +9.5%), <b>미래에셋만 유지</b>(10만원). 9사 평균 TP <b class="gold">97,667원</b> · 4/30 종가 대비 <b class="green">+46.0% 상승여력</b></li>
+    <li><span class="exec-lbl gold">시장 평가 ★</span><b class="navy">회사가 26.2Q·연간 가이던스를 보수적으로 제시</b>(26.2Q +8~9% / 중국 +6~7% / 연간 +7%)<b class="navy">했음에도, 시장은 국내(인바운드 호조) + 중국(현지화 전략 성과) 양방향 모멘텀을 강하게 평가</b>하여 일제히 목표주가 상향 → <b class="green">주가 상승 동력 확보</b>. 모건스탠리는 회사 가이던스를 <b>"still conservative"</b>로 평가, 컨센 대비 +17% 공격적 영업이익 추정</li>
+    <li><span class="exec-lbl">2026E 컨센</span>매출 <b>20,934억 (+8.2% YoY</b> · vs 2025년 19,340억<b>)</b> · 영업이익 <b>5,368억 (+14.6% YoY</b> · vs 2025년 4,686억<b>)</b> · OPM <b>25.6% (+1.4%p)</b> — <b>시장 컨센이 회사 연간 가이던스(+7%)를 상회하는 수준</b></li>
+    <li><span class="exec-lbl">주가 변동 요인</span><b class="gold">테일러메이드 우선매수권 재부각</b>(모건스탠리 추정 거래 종결 26.4Q) · <b>26.2Q 국내 인바운드 모멘텀 지속</b>(일본 골든위크·중국 노동절) · <b>중국 현지화 전략 성과</b>(NH: Adidas와 동일 패턴)</li>
+    <li><span class="exec-lbl gold">특이사항 ★</span><b class="navy">외국계 모건스탠리, 투자의견 Equal-weight(중립) → Overweight(비중확대=BUY) 1단계 상향</b>, TP +25%(72,000원→90,000원). 2026E 영업이익 추정 5,900억 = 컨센 +17% 상회. <b class="green">→ 외국인 수급 우호적 변동 가능</b></li>
+  </ul>
+  <div style="font-size:8px;color:#6b7280;margin-top:4px">※ 모건스탠리 등급 체계: Overweight(OW)=비중확대=BUY와 동일 / Equal-weight(EW)=중립 / Underweight(UW)=매도</div>
+</div>
+
+<!-- KPI cards -->
+<div class="kpi">
+  <div class="kc kn">
+    <div class="kl">26.1Q 매출액 (실적)</div>
+    <div class="kv">5,609<span style="font-size:11px;font-weight:600"> 억</span></div>
+    <div class="ks">컨센 5,291억 대비 <b class="up">+6.0% 상회</b> · YoY <b class="up">+10.9%</b></div>
+  </div>
+  <div class="kc kn">
+    <div class="kl">26.1Q 영업이익 (실적)</div>
+    <div class="kv">1,535<span style="font-size:11px;font-weight:600"> 억</span></div>
+    <div class="ks">컨센 1,348억 대비 <b class="up">+13.8% 상회</b> · OPM <b class="up">27.4%</b></div>
+  </div>
+  <div class="kc kg">
+    <div class="kl">목표주가 평균 (9사)</div>
+    <div class="kv">97,667<span style="font-size:11px;font-weight:600"> 원</span></div>
+    <div class="ks"><b>4/30 종가(66,900원) 대비</b> <b class="up">+46.0% 상승여력</b></div>
+  </div>
+  <div class="kc kgr">
+    <div class="kl">투자의견 분포 (매수/중립/매도)</div>
+    <div class="kv">9 / 0 / 0</div>
+    <div class="ks">국내 8사 BUY + <b class="up">모건스탠리 EW→OW 신규 상향(+25%)</b></div>
+  </div>
+  <div class="kc kr">
+    <div class="kl">2026E PER (9사 EPS 평균)</div>
+    <div class="kv">5.2<span style="font-size:11px;font-weight:600"> 배</span></div>
+    <div class="ks">글로벌 Peer 평균 <b>21배</b>(NIKE 30·Adidas 16·ANTA 13) 대비 <b class="dn">약 1/4 수준</b></div>
+  </div>
+</div>
+
+<!-- Row 1: 증권사별 목표주가 변경 + 변동이유 -->
+<div class="section">
+  <div class="sec-t"><span class="n">1</span>증권사별 목표주가 변경 내역 및 상향 사유 (26.1Q 실적 발표 후, 국내 8사 BUY + 외국계 모건스탠리 신규 BUY 상향 = 9사 BUY 진영)</div>
+  <table class="tb tb-c">
+    <thead>
+      <tr>
+        <th style="width:11%">증권사 (애널리스트)</th>
+        <th style="width:8%">변경 전</th>
+        <th style="width:8%">변경 후</th>
+        <th style="width:8%">변동률</th>
+        <th style="width:8%">Target P/E</th>
+        <th>목표주가 변동 이유 (원문 인용)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>한화투자 (이진협)</td><td>94,000</td><td>105,000</td><td class="up">↑ +11.7%</td><td>10배</td><td style="text-align:left">"실적 전망치 상향에 따른 것" — 26E 매출 20,829억(+8%), OP 5,302억(+13%) 전망. <b>국내외에서 MLB 견조한 브랜드력 확인</b>, 테일러메이드 인수 가능성 재부각 긍정적</td></tr>
+      <tr><td>KB증권 (류은애)</td><td>87,000</td><td>100,000</td><td class="up">↑ +14.9%</td><td>8배</td><td style="text-align:left">"<b>26.1Q 실적 서프라이즈를 반영해 2026년 영업이익·지배주주순이익 추정치를 +2.4%, +24.2% 상향</b> 조정한 데 기인" — 5개년 평균 P/E 대비 10% 할인 적용</td></tr>
+      <tr><td>DB증권 (허제나)</td><td>90,000</td><td>100,000</td><td class="up">↑ +11.1%</td><td>7배</td><td style="text-align:left">"<b>실적 추정치를 소폭 상향 조정함에 따라</b> 목표주가를 10만원으로 높여 제시" — <b>현 주가 기준 12개월 선행 PER 5배 수준</b>으로 내수 브랜드사 평균 대비 밸류에이션 매력 높음. 저평가 관점에서의 매수 접근 유효</td></tr>
+      <tr><td>대신증권 (유정현)</td><td>90,000</td><td>100,000</td><td class="up">↑ +11.1%</td><td>8배</td><td style="text-align:left">"<b>26-27년 실적 상향 조정에 따른 것</b>" — 매출 +2.7%, OP +7.0%, 지배순이익 +8.6% 상향. 그동안 단점이던 주력 브랜드 저성장이 26.1Q부터 일부 해소</td></tr>
+      <tr><td>미래에셋 (배송이)</td><td>100,000</td><td>100,000</td><td class="mu">유지</td><td>8배</td><td style="text-align:left"><b>"외국인이 견인하는 레버리지"</b> — 인바운드 상권 매장+플래그십 매출 +70% 이상, 외국인 비중 11%→16% 확대. <b>"테일러메이드 등 본업 외 신성장이 아닌, 본업 실적 모멘텀 재점화에 주목해야 하는 시점"</b>. 25.4월 100k 상향 후 유지</td></tr>
+      <tr><td>NH투자 (정지윤)</td><td>95,000</td><td>100,000</td><td class="up">↑ +5.3%</td><td>9배</td><td style="text-align:left">"<b>연간 영업이익 추정치 상향에 기인</b>" — 매출 +2.1%, OP +5.2%, EPS +29.2% 상향(사옥매각 반영). 해외 사업 비중 감안 국내 의류주 상단 부여</td></tr>
+      <tr><td>삼성증권 (이혜인)</td><td>85,000</td><td>90,000</td><td class="up">↑ +5.9%</td><td>8배</td><td style="text-align:left">"<b>26.1Q 호실적 반영해 2026E EPS를 +8% 상향</b>" — <b class="navy">회사 가이던스 4~5% → 7% 수준으로 상향</b>. 다만 중동발 지정학적 리스크 반영해 멀티플 8배 유지(보수적)</td></tr>
+      <tr><td>SK증권 (형권훈)</td><td>90,000</td><td>94,000</td><td class="up">↑ +4.4%</td><td>8배</td><td style="text-align:left">"<b>소비 업황 회복을 감안해 동사의 '26년과 '27년 EPS 추정치를 +5.7%, +4.9% 상향</b>" — Peer(ANTA/Li Ning/Xtep) 16배 대비 50% 할인 적용</td></tr>
+      <tr class="hl"><td>모건스탠리 (Jenna Lee)</td><td class="dn">72,000<br/><span style="font-size:7px;color:#b91c1c">EW(중립)</span></td><td class="up">90,000<br/><span style="font-size:7px;color:#15803d">OW(BUY)</span></td><td class="up">↑ +25.0%<br/><span style="font-size:7px">+ 등급 1단계 상향</span></td><td>12개월 선행<br/>PER 6배</td><td style="text-align:left">"<b>F&amp;F가 시장 기대치를 outperform할 것이라는 high conviction</b>" — ① 26.1Q 호실적 반영 <b>2026~27 EPS 추정치 +18~32% 상향</b>(2026 매출 +13%·OP +26% 전망), ② <b>2026E 중국 매출 +19% YoY 가속</b>(2025년 +12% 대비, 환효과 + 점당 매출 개선), ③ <b>국내 매출도 외국인 소비(인바운드) 기반 견조한 모멘텀으로 회복 전망</b>, ④ 12개월 선행 PER 5배 — <b>5년 평균 9배 대비 절반 수준으로 저평가 매력</b>, ⑤ 테일러메이드 입찰 재진행 시 추가 관심 모멘텀</td></tr>
+      <tr class="sm"><td>평균 (9사)</td><td>89,222</td><td>97,667</td><td class="up">↑ +9.5%</td><td>~7~8배</td><td style="text-align:left"><b>공통 사유: ① 26.1Q 실적 서프라이즈 반영 ② 2026~2027년 매출·영업이익·EPS 추정치 상향 ③ <b class="navy">회사 보수적 가이던스(+7%)에도 국내·중국 양방향 모멘텀 강하게 평가</b> ④ 밸류에이션 매력 재확인 ⑤ <b class="green">외국계 모건스탠리 등급 상향 = 외국인 수급 변곡점</b></b></td></tr>
+    </tbody>
+  </table>
+  <div style="font-size:7.5px;color:#6b7280;margin-top:2px">현재주가: <b>66,900원</b> (4/30 종가) · 9사 평균 TP 97,667원 기준 상승여력 <b class="green">+46.0%</b> · 9사 전원 BUY (국내 8사 + 외국계 모건스탠리) · 모건스탠리 Bull Case 120,000원 / Base 90,000원 / Bear 60,000원<br/>※ 모건스탠리 등급 체계: <b>OW=Overweight(비중확대=BUY)</b> / <b>EW=Equal-weight(중립)</b> / UW=Underweight(매도)</div>
+</div>
+
+<!-- Row 2: 26.2Q 전망 + 2026 전망 -->
+<div class="row">
+  <div class="col-1">
+    <div class="sec-t"><span class="n">2</span>26.2Q 컨센서스 (국내 8사 평균)</div>
+    <table class="tb tb-c">
+      <thead>
+        <tr><th>지표</th><th>25.2Q(실적)</th><th>26.2QE</th><th>YoY</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>매출액</td><td>3,789</td><td>4,075</td><td class="up">+7.5%</td></tr>
+        <tr><td>영업이익</td><td>840</td><td>962</td><td class="up">+14.5%</td></tr>
+        <tr><td>영업이익률</td><td>22.2%</td><td>23.6%</td><td class="up">+1.4%p</td></tr>
+        <tr><td>지배순이익</td><td>628</td><td>722</td><td class="up">+15.0%</td></tr>
+        <tr><td colspan="4" style="background:#eef1f5;font-weight:700;padding-left:8px;text-align:left">▶ 사업부별 매출 (국내 8사 평균)</td></tr>
+        <tr><td>MLB 비면세(내수)</td><td>554</td><td>628</td><td class="up">+13.4%</td></tr>
+        <tr><td>MLB 면세</td><td>284</td><td>280</td><td class="dn">-1.4%</td></tr>
+        <tr><td>MLB Kids</td><td>213</td><td>223</td><td class="up">+4.7%</td></tr>
+        <tr><td>Discovery 국내</td><td>663</td><td>696</td><td class="up">+5.0%</td></tr>
+        <tr class="hl"><td>China (MLB)</td><td>1,707</td><td>1,829</td><td class="up">+7.1%</td></tr>
+        <tr><td>Hong Kong</td><td>157</td><td>183</td><td class="up">+16.6%</td></tr>
+      </tbody>
+    </table>
+    <div style="font-size:7.5px;color:#6b7280;margin-top:2px">※ 단위: <b>억원</b> (영업이익률·YoY% 제외) · <b>국내 8개 증권사 추정치 평균</b><br/>※ <b style="color:#a07a2c">모건스탠리는 분기별 추정치를 제공하지 않아 8사 평균에서 제외</b> (연간 추정만 발표)<br/>※ 中 +7% 둔화는 26.1Q S/S 선출고 효과 소멸 영향 (SK·대신)<br/><br/><b style="color:#0b2d52">▶ 회사 제시 26.2Q 가이던스</b>: 전사 <b>+8.5%</b>, 중국 <b>+6.6%</b>, 국내 <b>+7.1%</b> (주요 5개 브랜드 기준)<br/><b style="color:#a07a2c">▶ 시장 컨센서스 vs 회사 가이던스</b>: 시장은 <b>중국 매출 성장률을 회사 가이던스(+6.6%)보다 소폭 상회한 +7.1%로 추정</b> → 이에 따라 <b>영업이익 컨센서스가 회사 내부 목표를 상회하는 수준으로 형성</b></div>
+  </div>
+
+  <div class="col-1">
+    <div class="sec-t"><span class="n">3</span>2026 연간 컨센서스 (9사 평균)</div>
+    <table class="tb tb-c">
+      <thead>
+        <tr><th>지표</th><th>2025(실적)</th><th>2026E</th><th>YoY</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>매출액</td><td>19,340</td><td>20,934</td><td class="up">+8.2%</td></tr>
+        <tr><td>영업이익</td><td>4,686</td><td>5,368</td><td class="up">+14.6%</td></tr>
+        <tr><td>영업이익률</td><td>24.2%</td><td>25.6%</td><td class="up">+1.4%p</td></tr>
+        <tr><td>지배순이익</td><td>3,990</td><td>4,908</td><td class="up">+23.0%</td></tr>
+        <tr><td>EPS (원)</td><td>10,404</td><td>12,900</td><td class="up">+24.0%</td></tr>
+        <tr><td colspan="4" style="background:#eef1f5;font-weight:700;padding-left:8px;text-align:left">▶ 증권사별 영업이익 추정치 (2026E)</td></tr>
+        <tr class="hl"><td>모건스탠리</td><td>—</td><td>5,900</td><td class="up">최고치 (외국계)</td></tr>
+        <tr><td>미래에셋</td><td>—</td><td>5,390</td><td class="up">상위</td></tr>
+        <tr><td>대신/SK</td><td>—</td><td>5,370</td><td class="up">상위</td></tr>
+        <tr><td>NH투자</td><td>—</td><td>5,320</td><td class="mu">평균</td></tr>
+        <tr><td>KB/한화</td><td>—</td><td>5,300</td><td class="mu">평균</td></tr>
+        <tr><td>DB증권</td><td>—</td><td>5,210</td><td class="dn">하위</td></tr>
+        <tr><td>삼성증권</td><td>—</td><td>5,150</td><td class="dn">최저(보수)</td></tr>
+        <tr class="sm"><td>2026E PER (9사 평균)</td><td>6.4배</td><td>5.2배</td><td class="dn">↓ EPS 증가 효과</td></tr>
+      </tbody>
+    </table>
+    <div style="font-size:7.5px;color:#6b7280;margin-top:2px">※ 단위: <b>억원</b> (영업이익률·EPS·PER·YoY% 제외) / <b>9개 증권사 2026E 추정치 평균</b> (국내 8사 + 모건스탠리)<br/>※ <b>모건스탠리가 가장 공격적(5,900억, 컨센 +17%)</b>, 삼성이 가장 보수적(5,150억) · Spread 5,150~5,900억 (±7.0%)<br/>※ <b>글로벌 Peer 평균 21배</b>는 글로벌 스포츠웨어 동종업계(NIKE 30배·Adidas 16배·Lululemon 13배·ANTA 13배 등)의 12개월 선행 PER 평균 (모건스탠리 산정)</div>
+  </div>
+</div>
+
+<!-- Row 3: 투자포인트 -->
+<div class="row">
+  <div class="col-1">
+    <div class="card pos">
+      <h4 class="p">▲ 긍정 요인 (공통 언급)</h4>
+      <ul>
+        <li><b>국내 비면세 +15% 회복</b> — 소비심리 개선, MLB 플래그십 매출 +111%, <b>플래그십 매출 중 93%가 외국인 매출</b> (한화)</li>
+        <li><b>중국 +17% 서프라이즈</b> — 중국 의류 소매판매 +9.3% + 위안화 +6% + S/S 액세서리(모자·신발) 선출고</li>
+        <li><b>중국 법인 기존점당 매출 +15%</b> — 매장 효율화(부진점 폐점) 전략 + 정상가 판매율 향상으로 OPM +3.0%p 개선</li>
+        <li><b>OPM 27.4% 달성</b> — GPM +50bps + 판관비율 -250bps, 영업레버리지 본격 작동 (대신)</li>
+        <li><b>밸류에이션 극심한 저평가</b> — 2026E PER 5.2배, <b>글로벌 Peer 평균 21배(NIKE·Adidas·ANTA)</b> 대비 약 1/4 수준</li>
+        <li><b>MLB 글로벌 저변 확대</b> — 동남아·일본·서구권으로 외국인 국적 다변화 (NH)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-1">
+    <div class="card neg">
+      <h4 class="n">▼ 우려 요인 (리스크)</h4>
+      <ul>
+        <li><b>디스커버리 -2.4% 부진 지속</b> — 채널 재편으로 매장 10개 감소, 회복 강도 미흡 (KB/DB)</li>
+        <li><b>26.2Q 중국 성장률 둔화 전망</b> — 회사 가이던스 +6~7% (26.1Q +17% 대비 하락), 26.1Q 선출고 효과 소멸 (SK/대신)</li>
+        <li><b>면세점 -7% 약세 지속</b> — 전략적 채널 축소로 매장 수 감소 (전 증권사)</li>
+        <li><b>강한 내수 회복세 대비 상대적 약세</b> — 시장 회복세만큼 강하지 않은 점 아쉬움 (DB)</li>
+        <li><b>Sergio Tacchini -8.9%</b> — 26.1Q 일시 부진 (DB), 연간으로는 +18% 성장 전망</li>
+        <li><b>중국 궈차오(애국 소비) 리스크</b> — 현지 브랜드 경쟁 심화 장기 모니터링 필요 (NH)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-1">
+    <div class="card neu">
+      <h4 class="u">★ 주가 변동 요인</h4>
+      <ul>
+        <li><b>테일러메이드 입찰 재진행</b> — 우선협상자(올드톰캐피탈) 지위 상실로 매각 절차 재진행 예상. 모건스탠리는 거래 종결 시점을 <b>26.4Q</b>으로 추정 (한화·MS 공통 언급)</li>
+        <li><b>26.2Q 인바운드 모멘텀</b> — 일본 골든위크 + 중국 노동절 연휴, 3월 오픈한 북촌점 등 플래그십 수혜 기대 (KB)</li>
+        <li><b>중국 현지화 전략 성과 지속</b> — 점당 매출 +15% 효율화 + S/S 액세서리(모자·신발) 카테고리 확장 (NH: Adidas와 동일 패턴)</li>
+        <li><b>디스커버리 중국 확장</b> — 27개 → 연말 40개 목표, 프리미엄 아웃도어 수요 흡수</li>
+        <li><b>Discovery 앰베서더 효과</b> — 에스파 닝닝 기용 후 브랜드 이미지 제고 확인, F/W 시즌 기대 (KB)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Row 4: 주요 토픽 Deep Dive (실적 분석 + 주가 변동 요인) -->
+<div class="section">
+  <div class="sec-t"><span class="n">4</span>주요 토픽 Deep Dive — 실적 분석 + 주가 변동 요인</div>
+  <div class="row">
+    <div class="col-1">
+      <div class="ibox">
+        <div class="ih">실적 Deep Dive ① &nbsp;26.1Q 서프라이즈 핵심 동인<span class="tag">EARNINGS</span></div>
+        <ul>
+          <li><span class="lbl">숫자 요약</span>매출 <b>5,609억(+10.9%)</b>, 영업이익 <b>1,535억(+24.2%)</b>, <b>OPM 27.4%(+3.0%p)</b> — 컨센 매출 +6%, OP +14% 상회</li>
+          <li><span class="lbl">국내</span>비면세 <b>+15.4%</b>, MLB Kids +9.6%, <b>플래그십 매출 +111%</b>(플래그십 매출의 93%가 외국인). 디스커버리만 -2.4% 부진</li>
+          <li><span class="lbl">중국</span>매출 <b>3,031억(+17.3%)</b> — 위안화 +6% 환효과 제거해도 시장 눈높이 상회. <b>S/S 액세서리(모자·신발) 선출고 + 중국 기존점당 매출 +15%</b>. 중국 의류 소매판매 +9.3% 회복세 동반</li>
+          <li><span class="lbl">수익성</span>GPM <b>+50bps</b>, 판관비율 <b>-250bps</b> → OP 레버리지 작동</li>
+          <li><span class="lbl gold">일회성</span><b class="gold">역삼 사옥 매각차익 1,050억원 + 외환손익 130억원</b> 반영 → 지배순이익 <b>1,976억(+138%)</b></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-1">
+      <div class="ibox">
+        <div class="ih">주가 변동 요인 ② &nbsp;테일러메이드 우선매수권 재부각<span class="tag">M&amp;A</span></div>
+        <ul>
+          <li><span class="lbl">현황</span>센트로이드 테일러메이드 매각 우선협상자 <b>올드톰캐피탈 자금조달 지연 → 지위 상실</b>. 매각 절차 재진행 예상 (한화증권). 모건스탠리는 거래 종결 시점 <b>26.4Q 예상</b></li>
+          <li><span class="lbl green">F&amp;F 입장</span>새롭게 형성될 입찰 가격 면밀히 분석해 <b class="green">우선매수권 행사 여부 결정 계획</b></li>
+          <li><span class="lbl">2가지 시나리오</span>
+            <ul>
+              <li><b class="green">시나리오 1 — 우선매수권 행사 (인수)</b>: 테일러메이드 '24 EBITDA ~3,000억, 예상 연간 이자비용 1,000억 중반. 아시아 시장 진출 경험 + 브랜드 시너지</li>
+              <li><b class="gold">시나리오 2 — 미행사 (지분 매각)</b>: 차익 실현 → 운영자금/신성장 동력 투자 재원 확보</li>
+            </ul>
+          </li>
+          <li><span class="lbl gold">증권사 시각</span><b>어느 시나리오든 기업가치에 긍정적</b> (한화·KB·삼성 공통). 모건스탠리: <b>테일러메이드 매각 거래가 진행됨에 따라 F&amp;F가 보유한 ~58% 지분의 가치가 재평가되며, 우선매수권 행사 여부와 무관하게 F&amp;F 주가 upside 발생 가능</b></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Row 5: 증권사별 핵심 코멘트 -->
+<div class="section">
+  <div class="sec-t"><span class="n">5</span>증권사별 리포트 핵심 메시지 (26.1Q 발표 후, 국내 8사 BUY + 외국계 모건스탠리 신규 BUY = 9사)</div>
+  <div class="qblock" style="grid-template-columns:repeat(3,1fr);gap:6px">
+    <div class="qq" style="border:1.5px solid #a07a2c;background:rgba(160,122,44,.04)">
+      <div class="qh"><span><b class="gold">★ 모건스탠리 (외국계)</b></span><span class="qtp" style="background:#a07a2c;color:#fff">TP 90,000 ↑ +25% / EW→OW</span></div>
+      <div class="qt">"1Q26 Beat on China; Upgrade to OW"</div>
+      <div class="qd"><b class="navy">[고무적 시그널]</b> 등급 Equal-weight(중립) → <b>Overweight(비중확대=BUY) 1단계 상향</b>, TP 72,000원 → 90,000원(+25%). <b>2026E 영업이익 5,900억으로 컨센 대비 +17% 상회</b>. "F&amp;F가 시장 기대치를 outperform할 것이라는 high conviction". <b>2026E 중국 +19% YoY 가속 + 국내 인바운드 기반 회복 모멘텀</b>. <b class="green">외국계 BUY 합류 → 외국인 수급 우호적 변곡점</b>.</div>
+    </div>
+    <div class="qq">
+      <div class="qh"><span>한화투자 · 이진협</span><span class="qtp">TP 105,000 ↑ +11.7%</span></div>
+      <div class="qt">"국내외에서 확인된 MLB의 브랜드력"</div>
+      <div class="qd">컨센 매출 +6%, OP +14% 초과 호실적. <b>MLB 플래그십 매출 +111%, 매출의 93%가 외국인</b>. 中 +17.3% / 香 +25%. <b>견조한 브랜드력으로 외형성장세 지속</b>. 테일러메이드 재부각 긍정적. Target P/E 10배.</div>
+    </div>
+    <div class="qq">
+      <div class="qh"><span>KB증권 · 류은애</span><span class="qtp">TP 100,000 ↑ +14.9%</span></div>
+      <div class="qt">"소비 심리 개선과 사업 재편으로 서프라이즈"</div>
+      <div class="qd">한중 소비심리 개선 + 사업 재편 효과 결합. MLB 국내 +15.5%, 中 +17.2%, OPM 27.4%(+3.0%p). <b>26.2Q 인바운드+중국 회복으로 훈풍 지속</b>. 2026E EPS 25% 상향. Target P/E 8배.</div>
+    </div>
+    <div class="qq">
+      <div class="qh"><span>DB증권 · 허제나</span><span class="qtp">TP 100,000 ↑ +11.1%</span></div>
+      <div class="qt">"내수 회복, 중국 선출고로 기대치 상회"</div>
+      <div class="qd">내수·중국 매출 예상 대비 양호. <b>26SS 신상품 조기 출고 영향 큼</b>. 회사 26.2Q 가이던스 매출 +8~9%, 中 +7%. <b>강한 내수 회복세 대비 강도 약한 점 아쉬움</b>. Target P/E 7배.</div>
+    </div>
+    <div class="qq">
+      <div class="qh"><span>대신증권 · 유정현</span><span class="qtp">TP 100,000 ↑ +11.1%</span></div>
+      <div class="qt">"실적 개선 시작, valuation 극심한 저평가"</div>
+      <div class="qd">국내·중국 모두 고성장 서프라이즈. <b>주력 브랜드 저성장 26.1Q부터 일부 해소</b>. GPM +50bps, 판관비 -250bps. 26.2Q 중국 둔화 우려 있으나 <b>국내 회복만으로도 valuation 매력</b>. Target P/E 8배.</div>
+    </div>
+    <div class="qq">
+      <div class="qh"><span>미래에셋 · 배송이</span><span class="qtp">TP 100,000 유지</span></div>
+      <div class="qt">"외국인이 견인하는 레버리지"</div>
+      <div class="qd"><b>인바운드 상권 매장+플래그십 매출 +70% 이상 성장, 외국인 비중 11%→16% 확대</b>. <b>"테일러메이드 등 본업 외 신성장이 아닌, 본업 실적 모멘텀 재점화에 주목할 시점"</b>. 올해 15% 두자릿수 증익 예상. PER 6배 절대적 저평가.</div>
+    </div>
+    <div class="qq">
+      <div class="qh"><span>NH투자 · 정지윤</span><span class="qtp">TP 100,000 ↑ +5.3%</span></div>
+      <div class="qt">"주가가 올라야 정상"</div>
+      <div class="qd"><b>"우리가 잊고 있던 중국+인바운드 수혜주"</b>. 환효과 제거해도 중국 눈높이 상회. <b>"Adidas FY1Q26 중국 성장률 전사 상회 사례처럼, F&amp;F 호조도 현지화 제품·마케팅 전략의 꾸준한 성과"</b>. PER 5.2배 매수 권고.</div>
+    </div>
+    <div class="qq">
+      <div class="qh"><span>삼성증권 · 이혜인</span><span class="qtp">TP 90,000 ↑ +5.9%</span></div>
+      <div class="qt">"1분기 호실적 기반 연간 가이던스 상향"</div>
+      <div class="qd"><b class="navy">회사 가이던스 4~5% → 7% 수준 상향</b>. 26.1Q 대부분 사업부 두자릿수 성장. 2026E EPS +8% 상향. 다만 중동발 지정학적 리스크 반영해 Target P/E 8배 유지(보수적). 리스크 완화 시 리레이팅 가능.</div>
+    </div>
+    <div class="qq">
+      <div class="qh"><span>SK증권 · 형권훈</span><span class="qtp">TP 94,000 ↑ +4.4%</span></div>
+      <div class="qt">"국내와 중국 모두 좋았다"</div>
+      <div class="qd">Signal: OP 컨센 14% 상회. Key: 소비경기 회복 + MLB 中 재고 선출하 + 환율 효과. Step: <b>업황 회복 관점에서 매수 유효</b>. 26.2Q 중국 +7.7%로 둔화되나 <b>비내구재 소비 강세 주목</b>. Target P/E 8배(Peer 16배 대비 50% 할인).</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<div class="ftr">
+  <div>커버리지: <b>국내 8사</b> KB(4/30), DB·대신·한화·SK·NH·삼성·미래에셋(5/4) + <b>외국계 1사</b> 모건스탠리(Morgan Stanley, 5/3, EW→OW 상향)</div>
+  <div>출처: 각 증권사 리포트 / 회사 IR / FnGuide | 내부 보고 전용</div>
+</div>
+
+</div>
+</body>
+</html>
